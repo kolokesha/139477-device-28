@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Alex Cross](https://up.htmlacademy.ru/htmlcss/28/user/139477).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Чернова](https://htmlacademy.ru/profile/id49571).
 
 ---
 
