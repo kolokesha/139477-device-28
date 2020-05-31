@@ -12,7 +12,11 @@
          alt="Логотип интернет магазина">
   </a>
   <div class="search">
-    <input type="search" id="search" placeholder="Поиск по сайту">
+    <form action="https://echo.htmlacademy.ru" method="get">
+    <input class="search-input" type="search" id="search-form" aria-label="Поиск по сайту"
+           placeholder="Поиск по сайту">
+      <button class="search-button" type="submit">Найти</button>
+    </form>
   </div>
   <ul>
     <li>
@@ -30,7 +34,22 @@
   </ul>
   <nav class="main-nav">
     <ul>
-      <li><a href="">Каталог товаров</a></li>
+      <li><a href="">Каталог товаров</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">
+            <a href="">Виртуальная реальность</a>
+            <a href="monopods.html">Моноподы для селфи</a>
+            <a href="">Экш-камеры</a>
+          </li>
+          <li class="dropdown-item">
+            <a href="">Фитнес-браслеты</a>
+            <a href="">Умные часы</a>
+          </li>
+          <li class="dropdown-item">
+            <a href="">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </li>
       <li><a href="">Доставка</a></li>
       <li><a href="">Гарантия</a></li>
       <li><a href="">Контакты</a></li>
@@ -38,9 +57,9 @@
   </nav>
 </header>
 <main>
-  <h1>Интернет магазин "Девайс"</h1>
+  <h1 class="visually-hidden">Интернет магазин "Девайс"</h1>
   <section class="slider">
-    <h2>Список товаров</h2>
+    <h2 class="visually-hidden">Список товаров</h2>
     <ul class="main-slider">
       <li class="slider-item">
         <img class="slider-item-img" src="img/slider-1.png" width="384" height="486"
@@ -129,7 +148,7 @@
     </ul>
   </section>
   <section class="popular-items">
-    <h2>Популярные товары</h2>
+    <h2 class="visually-hidden">Популярные товары</h2>
     <ul class="popular-items-list">
       <li class="popular-items-item">
         <a href="">Виртуальная реальность</a>
@@ -152,7 +171,7 @@
     </ul>
   </section>
   <section class="services">
-    <h2>Доставка и гарантия</h2>
+    <h2 class="visually-hidden">Доставка и гарантия</h2>
     <ul class="services-list">
       <li class="services-item">
         Доставка
@@ -186,7 +205,7 @@
     </ul>
   </section>
   <section class="partners">
-    <h2>Партнеры</h2>
+    <h2 class="visually-hidden">Партнеры</h2>
     <ul class="partners-list">
       <li class="partner-item">
         <a href=""><img class="partner-img" src="img/logo-1.png" width="260" height="100"
@@ -230,7 +249,7 @@
 </main>
 <footer>
   <section class="footer-contacts">
-    <h2>Контактаная информация</h2>
+    <h2 class="visually-hidden">Контактаная информация</h2>
     <a>
       <img class="main-logo-img" src="img/logo-device.svg" width="163" height="35"
            alt="Логотип интернет магазина">
@@ -248,7 +267,7 @@
     </ul>
   </section>
   <section class="social-media">
-    <h2>Социальные сети</h2>
+    <h2 class="visually-hidden">Социальные сети</h2>
     <ul>
       <li>
         <a href="">Фейсбук</a>
@@ -262,7 +281,7 @@
     </ul>
   </section>
   <section class="footer-buttons">
-    <h2>Интерактивная работа с сайтом</h2>
+    <h2 class="visually-hidden">Интерактивная работа с сайтом</h2>
     <ul>
       <li>
         <a href="">Вход</a>
@@ -283,5 +302,31 @@
          alt="Логотип htmlacademy">
   </a>
 </footer>
+<section class="form-modal">
+  <h2 class="visually-hidden">Форма обратной связи</h2>
+  <button class="close-form" type="button" aria-label="Закрыть окно">Закрыть</button>
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <p>
+      <label for="name">Ваше имя:</label>
+      <input type="text" name="name-field" id="name" placeholder="Имя Фамилия" aria-required="true">
+    </p>
+    <p>
+      <label for="email">Ваш e-mail</label>
+      <input type="text" name="email-field" id="email" placeholder="email@example.com" aria-required="true">
+    </p>
+    <p>
+      <label for="text-message">Текст письма:</label>
+      <textarea id="text-message" name="message-field" placeholder="В свободной форме"></textarea>
+    </p>
+    <button class="btn btn-submit-modal" type="submit" aria-label="Отправить">Отправить</button>
+  </form>
+</section>
+<section class="modal-map">
+  <h2 class="visually-hidden">Карта проезда</h2>
+  <button class="form-modal-close" type="button" aria-label="Закрыть окно">Закрыть</button>
+  <iframe
+    src="https://yandex.ru/map-widget/v1/?um=constructor%3A9666f7bc1bc835d4a3f12faf5d96a846b23b7d8fa6f447d2e1a70edefbabbfab&amp;source=constructor" width="994" height="593" style="border:none;"></iframe>
+  <img src="img/map-big.png" alt="Карта проезда" width="994" height="593">
+</section>
 </body>
 </html>

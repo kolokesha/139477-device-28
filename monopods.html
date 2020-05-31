@@ -6,12 +6,16 @@
 </head>
 <body>
 <header class="main-header">
-  <a href="index.html">
+  <a>
     <img class="main-logo-img" src="img/logo-device.svg" width="163" height="35"
          alt="Логотип интернет магазина">
   </a>
   <div class="search">
-    <input type="search" id="search" placeholder="Поиск по сайту">
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <input class="search-input" type="search" id="search-form" aria-label="Поиск по сайту"
+             placeholder="Поиск по сайту">
+      <button class="search-button" type="submit">Найти</button>
+    </form>
   </div>
   <ul>
     <li>
@@ -29,7 +33,22 @@
   </ul>
   <nav class="main-nav">
     <ul>
-      <li><a href="">Каталог товаров</a></li>
+      <li><a href="">Каталог товаров</a>
+        <ul class="dropdown-menu">
+          <li class="dropdown-item">
+            <a href="">Виртуальная реальность</a>
+            <a href="monopods.html">Моноподы для селфи</a>
+            <a href="">Экш-камеры</a>
+          </li>
+          <li class="dropdown-item">
+            <a href="">Фитнес-браслеты</a>
+            <a href="">Умные часы</a>
+          </li>
+          <li class="dropdown-item">
+            <a href="">Квадрокоптеры</a>
+          </li>
+        </ul>
+      </li>
       <li><a href="">Доставка</a></li>
       <li><a href="">Гарантия</a></li>
       <li><a href="">Контакты</a></li>
@@ -65,6 +84,53 @@
   </section>
   <section class="filter">
     <h2>Фильтр:</h2>
+    <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+      <fieldset class="range-filter">
+        <legend>Стоимость</legend>
+        <button class="toggle min-toggle" type="button" aria-label="Максимальная цена"></button>
+        <button class="toggle max-toggle" type="button" aria-label="Минимальная цена"></button>
+        <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+        <label class="max-price">до <input type="text" name="max-price" value="5000"></label>
+      </fieldset>
+      <fieldset class="color">
+        <legend>Цвет</legend>
+        <ul class="filter-list">
+          <li class="filter-item">
+            <input type="checkbox" id="black" name="item-black" checked>
+            <label for="black">Черный</label>
+          </li>
+          <li class="filter-item">
+            <input type="checkbox" id="white" name="item-white">
+            <label for="white">Белый</label>
+          </li>
+          <li class="filter-item">
+            <input type="checkbox" id="blue" name="item-blue" checked>
+            <label for="blue">Синий</label>
+          </li>
+          <li class="filter-item">
+            <input type="checkbox" id="red" name="item-red" checked>
+            <label for="red">Красный</label>
+          </li>
+          <li class="filter-item">
+            <input type="checkbox" id="pink" name="item-pink">
+            <label for="pink">Розовый</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="bluetooth">
+        <legend>Bluetooth</legend>
+        <ul class="filter-list">
+          <li class="filter-item">
+            <input type="radio" id="with-bluetooth" name="bluetooth" value="yes" checked>
+            <label for="with-bluetooth">Есть</label>
+          </li>
+          <li class="filter-item">
+            <input type="radio" id="without-bluetooth" name="bluetooth" value="no">
+            <label for="without-bluetooth">Нет</label></li>
+        </ul>
+      </fieldset>
+      <button class="btn filter-button" type="submit">Показать</button>
+    </form>
   </section>
   <section class="catalog">
     <ul>
@@ -121,7 +187,7 @@
 </main>
 <footer>
   <section class="contacts">
-    <h2>Контактаная информация</h2>
+    <h2 class="visually-hidden">Контактаная информация</h2>
     <a href="index.html">
       <img class="main-logo-img" src="img/logo-device.svg" width="163" height="35"
            alt="Логотип интернет магазина">
@@ -131,7 +197,7 @@
     <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
   </section>
   <section class="footer-navigation">
-    <h2>Навигация по сайту</h2>
+    <h2 class="visually-hidden">Навигация по сайту</h2>
     <ul>
       <li><a href="">Доставка</a></li>
       <li><a href="">Гарантия</a></li>
@@ -139,7 +205,7 @@
     </ul>
   </section>
   <section class="social-media">
-    <h2>Социальные сети</h2>
+    <h2 class="visually-hidden">Социальные сети</h2>
     <ul>
       <li>
         <a href="">Фейсбук</a>
@@ -153,7 +219,7 @@
     </ul>
   </section>
   <section class="footer-buttons">
-    <h2>Интерактивная работа с сайтом</h2>
+    <h2 class="visually-hidden">Интерактивная работа с сайтом</h2>
     <ul>
       <li>
         <a href="">Вход</a>
